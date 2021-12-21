@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 def fizzbuzz():
     i = 0
-    for i in range(0, 101):
+    for i in range(1, 101):
         if (i % 3 == 0 and i % 5 != 0):
-            print("{}".format("Fizz"))
+            print("Fizz", end=" ")
         elif (i % 5 == 0 and i % 3 != 0):
-            print("{}".format("Buzz"))
+            print("Buzz", end=" ")
         elif((i % 3 == 0) and (i % 5 == 0)):
-            print("{}".format("FizzBuzz"))
+            print("FizzBuzz", end=" ")
+        elif(i == 1 or i == 2):
+            print(i, end=" ")
         else:
-            print("{}".format(i))
+            print(i, end=" ")
 
