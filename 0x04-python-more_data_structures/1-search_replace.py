@@ -1,9 +1,3 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    new_list = my_list[:]
-    if not new_list:
-        return None
-    for i in range(len(my_list)):
-        if new_list[i] == search:
-            new_list[i] = replace
-    return new_list
+    return[replace if search == a else a for a in my_list]
