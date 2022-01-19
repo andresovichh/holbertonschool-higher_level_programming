@@ -52,19 +52,19 @@ class Square:
                 print()
 
     
-@property
-def position(self):
-    """ Tghis whould be the getter"""
-    return(self.__position)
+    @property
+    def position(self):
+        """ Tghis whould be the getter"""
+        return(self.__position)
 
-@position.setter
-def position(self, value):
-    """ this would be the setter"""
-    if (type(value) is not tuple) or (len(value) != 2) :
-        raise TypeError("position must be a tuple of 2 positive integers")
-    elif value < 0:
-        raise ValueError("size must be >= 0")
-    else:
-        self.__position = value
+    @position.setter
+    def position(self, value):
+        """ this would be the setter"""
+        if (type(value) is not tuple) or (len(value) != 2) :
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__position = value
 
 
