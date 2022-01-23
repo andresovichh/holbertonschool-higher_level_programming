@@ -1,0 +1,63 @@
+===============================
+ How to Use add_integer
+===============================
+"""
+``add_integer()`` returns the product of its arguments.  For numbers,
+that value is equivalent to using the ``*`` operator.
+
+"""
+>>> add_integer = __import__('0-add_integer').add_integer
+
+test 1:
+
+>>> add_integer(2, 3)
+5
+
+test 2: (floating point)
+
+>>> add_integer(2.0, 3)
+5
+
+test 3: (no second parameter)
+
+>>> add_integer(2, )
+100
+
+test 4: (no parameters)
+
+>>> add_integer( , )
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+test 5: (string first parameter)
+
+>>> add_integer('hello', 9)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+test 6: (string second parameter)
+
+>>> add_integer(100, 'good bye')
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+
+test 7: (two floats)
+
+>>> add_integer(3.56, 8.9999)
+11
+
+test 8: (fraction first param)
+
+>>> add_integer((2/3), )
+98
+
+test 9: (fraction second & first parameter)
+
+>>> add_integer((2/3), (3/5))
+0
+
+test 10: (negative number)
+
+>>> add_integer(-98)
+0
