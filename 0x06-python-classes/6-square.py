@@ -3,11 +3,6 @@
 """ define a class Square
 das
 """
-
-
-from ctypes import sizeof
-
-
 class Square:
     """ this is the Square
     class
@@ -47,7 +42,7 @@ class Square:
             print("\n", end="")
         else:
             for i in range(self.__position):
-                for i in range(self.__position:
+                for i in range(self.__position):
                     print("#", end="")
                 print()
 
