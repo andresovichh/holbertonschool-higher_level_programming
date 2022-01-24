@@ -1,10 +1,10 @@
-#!usr/bin/python3
-"""Rectangle Module Class
+#!/usr/bin/python3
+"""Module Rectangle
 """
 
 
 class Rectangle:
-    """Definition of rectangle
-    """
+    """Rectangle class
+    is created here"""
     def __init__(self):
         self
