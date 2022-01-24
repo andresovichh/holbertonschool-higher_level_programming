@@ -1,9 +1,5 @@
 #!usr/bin/python3
 """ A module with a class for Rectangle"""
-
-from turtle import width
-
-
 class Rectangle:
     """Rectangle  is
     created here"""
