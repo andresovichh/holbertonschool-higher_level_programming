@@ -2,6 +2,8 @@
 """
 Rectangle Module Class
 """
+
+
 class Rectangle:
     """
     Definition of rectangle
