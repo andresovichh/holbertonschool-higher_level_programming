@@ -1,0 +1,51 @@
+========================
+How to use say_my_name
+========================
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+"""
+Foo receives a string or two and prints the 
+resulting string to stdout.
+Args are two strings.
+"""
+
+test 1:
+two strings
+
+>>> say_my_name("andres", "henderson")
+My name is andres henderson
+
+test 2:
+name string only
+
+>>> say_my_name("andres",)
+My name is andres 
+
+test 3:
+more tha 2 strings
+
+>>> say_my_name("andres", "henderson", "hola")
+Traceback (most recent call last):
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+test 4:
+first name not str
+
+>>> say_my_name(23, "henderson")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+test 5:
+last name not str
+
+>>> say_my_name("andres", 34.5)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+test 6:
+no Args
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
