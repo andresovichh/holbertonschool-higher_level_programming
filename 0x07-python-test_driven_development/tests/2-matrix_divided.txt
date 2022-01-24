@@ -1,0 +1,47 @@
+=============================
+How to use matrix_divided
+=============================
+
+"""
+''matrix_divided()'' returns a matrix made of a
+list of lists divided by div. import module
+2-matrix_divided, and foo matrix_divided
+"""
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+
+test 1:
+check if matrix is matrix
+>>> matrix_divided([[1, 2, 3], {4, 5, 6}], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+test 2:
+correct result for int division
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+test 3:
+div is not int or float
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 'test')
+Traceback (most recent call last):
+TypeError: div must be a number
+
+test 4:
+empty div
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], )
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+test 5:
+size of lists is different
+>>> matrix_divided([[1, 2, 3], [4, 5]], 3)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+test 6:
+empty matrix
+>>> matrix_divided([[],[]], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
