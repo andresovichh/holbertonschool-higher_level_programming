@@ -19,6 +19,17 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__width = width
         self.__height = height
+        
+    def __str__(self):
+        a_str = []
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        for i in range(self.__height):
+            for k in range(self.__width):
+                a_str.append("#")
+            if i < (self.__height - 1):
+                a_str.append("\n")
+        return "".join(a_str)
 
     @property
     def width(self):
@@ -55,15 +66,3 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (2 * (self.__height + self.__width))
-    
-    def __str__(self):
-
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        a_str = []
-        for i in range(self.__height):
-            for i in range(self.__width):
-                a_str.append("#")
-            if i < (self.__height - 1):
-                a_str.append("\n")
-        return ("".join(a_str))
