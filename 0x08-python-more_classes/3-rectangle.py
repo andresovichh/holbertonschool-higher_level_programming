@@ -19,7 +19,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__width = width
         self.__height = height
-        
+
     def __str__(self):
         a_str = []
         if self.__width == 0 or self.__height == 0:
