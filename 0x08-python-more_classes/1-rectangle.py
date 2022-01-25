@@ -8,8 +8,8 @@ class Rectangle:
     created here"""
 
     def __init__(self, width=0, height=0):
-        self.__height = height
         self.__width = width
+        self.__height = height
 
         if not isinstance(width, (int, float)):
             raise TypeError("width must be an integer")
