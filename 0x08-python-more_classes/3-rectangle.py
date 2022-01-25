@@ -60,7 +60,10 @@ class Rectangle:
 
         if self.__width == 0 or self.__height == 0:
             return ""
+        a_str = []
         for i in range(self.__height):
             for i in range(self.__width):
-                print('#', end="")
-            print()
+                a_str.append("#")
+            if i < (self.__height - 1):
+                a_str.append("\n")
+            return ("".join(a_str))
