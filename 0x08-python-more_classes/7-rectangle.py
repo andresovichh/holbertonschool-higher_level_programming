@@ -31,11 +31,12 @@ class Rectangle:
             return ""
         for i in range(self.__height):
             for k in range(self.__width):
-                if isinstance(self.print_symbol, str):
-                    a_str.append(self.print_symbol)
-                elif isinstance(self.print_symbol, list):
-                    for x in self.print_symbol:
-                        a_str += ' '+ x
+                # if isinstance(self.print_symbol, str):
+                #     a_str.append(self.print_symbol)
+                # elif isinstance(self.print_symbol, list):
+                #     for x in self.print_symbol:
+                #         a_str += ' '+ x
+                    a_str += str(self.print_symbol)
 
             if i < (self.__height - 1):
                 a_str.append("\n")
