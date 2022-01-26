@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """
 A foo that takes two args and prints
 My name is <first name> <last name> to stdout
