@@ -1,15 +1,15 @@
 #!/usr/bin/python3
+"""
+this foo is text_indentation
+"""
 
-"""
-text text_indentation
-"""
+
 def text_indentation(text):
     """
     text indentation
     args:
     text (str): a strig
     """
-    
     if not(isinstance(text, str)):
         raise TypeError("text must be a string")
     for delim in ".:?":
