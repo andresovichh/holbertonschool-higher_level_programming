@@ -11,7 +11,7 @@ def text_indentation(text):
     args:
     text (str): a strig
     """
-    if not (isinstance(text, str)):
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
     for delim in ".:?":
         text = (delim + "\n\n").join\
