@@ -11,4 +11,6 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer[None], None)
 
     def negnum(self):
-        self.assertEqual(max_integer[-3, 2], 2)
+        l = [1, 2, 3, 4, 5]
+        result = max_integer(l)
+        self.assertEqual(result, 5)
