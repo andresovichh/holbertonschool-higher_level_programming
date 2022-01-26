@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
 """
-
+text text_indentation
 """
 def text_indentation(text):
     """
+    text indentation
     """
     
     if not(isinstance(text, str)):
