@@ -6,6 +6,8 @@ text text_indentation
 def text_indentation(text):
     """
     text indentation
+    args:
+    text (str): a strig
     """
     
     if not(isinstance(text, str)):
