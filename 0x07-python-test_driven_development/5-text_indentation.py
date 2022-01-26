@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-this foo is text_indentation
+    this foo is text_indentation
+    fo ".", "?" and ":"
 """
 
 
@@ -15,4 +16,4 @@ def text_indentation(text):
     for delim in ".:?":
         text = (delim + "\n\n").join\
             ([line.strip(" ") for line in text.split(delim)])
-    print("{}".format(text), end=" ")
+    print("{}".format(text), end="")
