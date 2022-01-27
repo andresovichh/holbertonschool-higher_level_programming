@@ -1,0 +1,16 @@
+===========================
+How to use matrix_mult
+===========================
+
+"""
+text_indentation print a square pattern
+to stdout. 
+"""
+
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+
+test 1:
+
+>>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+[[7, 10], [15, 22]]
