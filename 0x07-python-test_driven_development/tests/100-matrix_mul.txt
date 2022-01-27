@@ -14,3 +14,38 @@ test 1:
 
 >>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
 [[7, 10], [15, 22]]
+
+test 2:
+!= sizes
+
+>>> print(matrix_mul([[1, 2], [3]], [[1, 2], [3, 4]]))
+Traceback (most recent call last):
+TypeError: each row of m_a must be of the same size
+
+test 3:
+!= sizes
+
+>>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [4]]))
+Traceback (most recent call last):
+TypeError: each row of m_b must be of the same size
+
+test 4:
+m_a empty
+
+>>> print(matrix_mul([], [[1, 2], [4]]))
+Traceback (most recent call last):
+ValueError: m_a can't be empty
+
+test 4:
+m_a empty
+
+>>> print(matrix_mul([[], [3, 4]], [[1, 2], [4]]))
+Traceback (most recent call last):
+ValueError: m_a can't be empty
+
+test 4:
+m_b empty
+
+>>> print(matrix_mul([[3], [3, 4]], [[], [4]]))
+Traceback (most recent call last):
+ValueError: m_b can't be empty
