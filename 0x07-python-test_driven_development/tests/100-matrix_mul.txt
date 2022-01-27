@@ -53,6 +53,6 @@ ValueError: m_b can't be empty
 test 4:
 m_b empty
 
->>> print(matrix_mul( , )
+>>> print(matrix_mul([],[])
 Traceback (most recent call last):
-SyntaxError: invalid syntax
+ValueError: m_a can't be empty
