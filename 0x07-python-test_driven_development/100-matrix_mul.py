@@ -44,3 +44,18 @@ def matrix_mul(m_a, m_b):
     for element in length_b:
         if element != first_element:
             raise TypeError("each row of m_b must be of the same size")
+    result = [] # final result
+    for i in range(len(m_a)):
+
+        row = [] # the new row in new matrix
+        for j in range(len(m_b[0])):
+        
+            product = 0 # the new element in the new row
+            for v in range(len(m_a[i])):
+                product += m_a[i][v] * m_b[v][j]
+            row.append(product) # append sum of product into the new row
+        
+        result.append(row) # append the new row into the final result
+
+
+    print(result)
