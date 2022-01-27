@@ -2,9 +2,6 @@
 """
 a foo to multiply two matrices
 """
-from typing import Type
-
-
 def matrix_mul(m_a, m_b):
 
     if not isinstance(m_a, list):
