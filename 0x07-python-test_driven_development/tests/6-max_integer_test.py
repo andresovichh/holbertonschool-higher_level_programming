@@ -2,15 +2,20 @@
 """Unittest for max_integer([..])
 """
 
+from typing import Type
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
 
-    def EmptyList(self):
-        self.assertEqual(max_integer[None], None)
+    def test_max(self):
+        """ something """
+        self.assertEqual(max_integer([2, 1250, 4810, 894, 154, 1564]), 4810)
 
-    def negnum(self):
-        l = [1, 2, 3, 4, 5]
-        result = max_integer(l)
-        self.assertEqual(result, 5)
+    def test_max(self):
+        """ something negative """
+        self.assertEqual(max_integer([2, 1250, -4810, 894, 154, 1564]), 1564)
+
+    def test_max(self):
+        """ all negative """
+        self.assertEqual(max_integer([-2, -1250, -4810, -894, -154, -1564]), -2)
