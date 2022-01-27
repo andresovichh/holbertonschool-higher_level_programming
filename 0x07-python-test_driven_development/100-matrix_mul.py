@@ -53,4 +53,6 @@ def matrix_mul(m_a, m_b):
             row.append(product) # append sum of product into the new row
         
         result.append(row) # append the new row into the final result
+    if  not result:
+        raise ValueError("m_a and m_b can't be multiplied") 
     return result
