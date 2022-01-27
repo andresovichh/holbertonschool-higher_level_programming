@@ -20,8 +20,10 @@ class TestMaxInteger(unittest.TestCase):
         """ all negative """
         self.assertEqual(max_integer([-2, -1250, -4810, -894, -154, -1564]), -2)
 
-def test_max(self):
+    def test_max(self):
         """ all negative """
         self.assertEqual(max_integer([-2, -1250, -4810, -894, -154, -1564]), -2)
+    def test_max(self):
+        """ all negative """
         self.assertEqual(max_integer([]), None)
 
