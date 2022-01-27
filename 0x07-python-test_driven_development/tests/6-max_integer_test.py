@@ -23,3 +23,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_max(self):
         """ all negative """
         self.assertEqual(max_integer([-2, -1250, -4810, -894, -154, -1564]), -2)
+        self.assertEqual(max_integer([-2]), -2)
+        self.assertEqual(max_integer([-2, 0, 1]), 1)
+        self.assertEqual(max_integer([-2, -3, -4]), -2)
+        self.assertEqual(max_integer([-2, -1, -3]), -1)
