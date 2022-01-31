@@ -38,3 +38,11 @@ Negative integer
 >>> bg.integer_validator("something", -3)
 Traceback (most recent call last):
 ValueError: something must be greater than 0
+
+test 5:
+
+doc present?
+
+>>> bg = __import__('7-base_geometry').__doc__
+>>> len(bg) > 1
+True
