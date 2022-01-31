@@ -68,3 +68,10 @@ are all args present?
 >>> bg.integer_validator("something", )
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+test 9:
+
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
