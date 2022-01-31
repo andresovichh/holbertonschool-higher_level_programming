@@ -54,3 +54,17 @@ is an integer?
 >>> bg.integer_validator("something", "john")
 Traceback (most recent call last):
 TypeError: something must be an integer
+
+test 7:
+Not print anything
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("something", 6545)
+
+test 8:
+are all args present?
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("something", )
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
