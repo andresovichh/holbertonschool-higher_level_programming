@@ -30,3 +30,11 @@ check if there is doc for bg
 >>> bg = __import__('7-base_geometry').BaseGeometry.__doc__
 >>> print(len(bg) > 0)
 True
+
+Test 4:
+
+Negative integer
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("something", -3)
+Traceback (most recent call last):
+ValueError: something must be greater than 0
