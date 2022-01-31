@@ -68,3 +68,11 @@ test 6:
 >>> my_list.append(500)
 >>> print(my_list)
 [500]
+
+test 7:
+
+documentation
+
+>>> my_list = __import__('1-my_list').MyList.__doc__
+>>> len(my_list) > 1
+True
