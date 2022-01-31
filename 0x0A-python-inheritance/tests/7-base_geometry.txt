@@ -1,0 +1,32 @@
+==========================
+How to use base_geometry
+==========================
+
+""" 
+Set of tests for base_geometry
+"""
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Test 1:
+
+Pasing args 
+>>> BaseGeometry("", "")
+Traceback (most recent call last):
+TypeError: BaseGeometry() takes no arguments
+
+Test 2:
+>>> bg = BaseGeometry()
+
+Not an integer
+>>> bg.integer_validator("something", None)
+Traceback (most recent call last):
+TypeError: something must be an integer
+
+Test 3:
+
+check if there is doc for bg
+
+>>> bg = __import__('7-base_geometry').BaseGeometry.__doc__
+>>> print(len(bg) > 0)
+True

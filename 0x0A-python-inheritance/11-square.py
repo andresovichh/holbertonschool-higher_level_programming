@@ -30,9 +30,26 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
-        """ area method def"""
+        """ Area definition s"""
         return (self.__width * self.__height)
 
     def __str__(self):
-        """ the str method"""
+        """ string method"""
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
+
+
+class Square(Rectangle):
+    """ Class square, that inherits from Rectangle"""
+
+    def __init__(self, size):
+        """ a square initialization"""
+        self.integer_validator("size", size)
+        self.__size = size
+
+    def area(self):
+        """ area method"""
+        return (self.__size * self.__size)
+
+    def __str__(self):
+        """ the str method"""
+        return ("[Square] {}/{}".format(self.__size, self.__size))

@@ -22,3 +22,41 @@ negative numbers
 
 test 2:
 
+a standard test
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(5)
+>>> my_list.append(3)
+>>> my_list.append(4)
+>>> my_list.print_sorted()
+[1, 3, 4, 5]
+
+test 3:
+
+no input
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+
+test 4:
+
+two args equal to each other
+
+>>> my_list = MyList()
+>>> my_list.append(100000)
+>>> my_list.append(100000)
+>>> my_list.print_sorted()
+[100000, 100000]
+
+
+test 5:
+
+appending none & not printting
+
+>>> my_list = MyList()
+>>> my_list.append(None)
+
+
