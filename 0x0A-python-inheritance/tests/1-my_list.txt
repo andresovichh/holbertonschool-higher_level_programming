@@ -60,3 +60,11 @@ appending none & not printting
 >>> my_list.append(None)
 
 
+test 6:
+
+1 arg
+
+>>> my_list = MyList()
+>>> my_list.append(500)
+>>> print(my_list)
+[500]
