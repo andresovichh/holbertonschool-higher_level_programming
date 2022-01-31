@@ -75,3 +75,18 @@ test 9:
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
+
+test 10:
+
+doc?
+
+>>> bg = __import__('7-base_geometry').BaseGeometry.area.__doc__
+>>> len(bg) > 1
+True
+
+test 11:
+other doc
+
+>>> bg = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+>>> len(bg) > 1
+True
