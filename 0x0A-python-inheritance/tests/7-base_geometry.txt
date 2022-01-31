@@ -46,3 +46,11 @@ doc present?
 >>> bg = __import__('7-base_geometry').__doc__
 >>> len(bg) > 1
 True
+
+Test 6:
+
+is an integer?
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("something", "john")
+Traceback (most recent call last):
+TypeError: something must be an integer
