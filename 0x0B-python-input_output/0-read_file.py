@@ -4,7 +4,6 @@
 Module that reads a text file UTF8"""
 
 
-
 def read_file(filename=""):
     """ Reads a file with 'with'
     Args:
