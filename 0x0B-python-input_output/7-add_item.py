@@ -2,7 +2,7 @@
 """
 returns the JSON representation of an object (string):"""
 
-
+import json
 from sys import argv
 """ import argv module"""
 
