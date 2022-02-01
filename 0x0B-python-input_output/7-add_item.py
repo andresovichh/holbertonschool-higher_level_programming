@@ -15,4 +15,4 @@ try:
     f = load_from_json_file("add_item.json" + argv[1:])
     save_to_json_file(f, "add_item.json")
 except:
-    something
+    save_to_json_file(argv[1:], "add_item.json")
