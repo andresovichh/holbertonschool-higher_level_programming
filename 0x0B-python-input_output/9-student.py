@@ -10,11 +10,9 @@ class Student:
         """ instanciation od class"""
         self.first_name = first_name
         self.last_name = last_name
-        self.age =age
+        self.age = age
 
-    @property
     def to_json(self):
         """
-        retrieves a dictionary representation
-        of a Student instance """
+        retrieves a dictionary """
         return self.__dict__
