@@ -21,12 +21,7 @@ class Student:
 
         if isinstance(attrs, list):
             for strings in attrs:
-                if not isinstance(strings, str):
-                    return self.__dict__
-                else:
+                if strings in self.__dict__:
                     a[strings] = self.__dict__[strings]
             return a
-
-            
-
-                    
+        return self.__dict__
