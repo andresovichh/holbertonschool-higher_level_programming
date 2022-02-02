@@ -29,5 +29,5 @@ class Student:
     def reload_from_json(self, json):
         """ replaces all attributes of the
         Studen instance"""
-        for x in json.items():
-            self.__dict__.update(x)
+        for x, y in json.items():
+            self.__dict__[x] = y
