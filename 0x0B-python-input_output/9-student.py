@@ -2,6 +2,7 @@
 """
 Module that creates a class"""
 
+
 class Student:
     """
     a class student"""
