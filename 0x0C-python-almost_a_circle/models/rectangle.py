@@ -26,32 +26,47 @@ class Rectangle(Base):
         """ gets the height"""
         return self.__height
 
+    @height.setter
+    def height(self, height):
+        """setter for the height"""
+        self.__height = height
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height < 0:
+            raise ValueError("height must be > 0")  
+
+    @width.setter
+    def width(self, width):
+        """setter for the width"""
+        self.__width = width
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be > 0")
     @property
     def x(self) -> str:
         """ gets the x"""
         return self.__x
+
+    @x.setter
+    def x(self, x):
+        """setter for the x"""
+        self.__x = x
+        if x < 0:
+            raise ValueError("x must be >= 0")
 
     @property
     def y(self) -> str:
         """ gets the y"""
         return self.__y
 
-    @width.setter
-    def width(self, width):
-        """setter for the width"""
-        self.__width = width
-
-    @height.setter
-    def height(self, height):
-        """setter for the height"""
-        self.__height = height
-
-    @x.setter
-    def x(self, x):
-        """setter for the x"""
-        self.__x = x
-
     @y.setter
     def y(self, y):
         """setter for the y"""
         self.__y = y
+
+        if y < 0:
+            raise ValueError("y must be >= 0")        
+
+if __name__ == '__main__':
+    main()
