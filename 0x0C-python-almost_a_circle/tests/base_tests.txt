@@ -1,0 +1,4 @@
+5. Passing a string
+6. Large numbers
+7. Passing a float
+8. Passing something else than an int
