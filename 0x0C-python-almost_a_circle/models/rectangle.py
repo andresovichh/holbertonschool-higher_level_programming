@@ -122,5 +122,15 @@ class Rectangle(Base):
                 #     self.y = value["5"]
                 # Setattr(obect, key, value)
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """ Returns the dictionary representation of
+        a rectangle"""
+        return {'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width}
+
 if __name__ == '__main__':
     main()
