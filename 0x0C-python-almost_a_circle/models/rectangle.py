@@ -82,11 +82,11 @@ class Rectangle(Base):
         if self.y <= 1:
             pass
         else:
-            print("\n"*int(self.y -1))
+            print("\n"*int(self.y - 1))
         for a in range(self.height):
             print(" " * self.x, end="")
-            for b in range(self.width):               
-                print("#", end="")           
+            for b in range(self.width):
+                print("#", end="")
             print()
 
     def __str__(self):
@@ -94,11 +94,12 @@ class Rectangle(Base):
         return '[Rectangle] ('+str(self.id)+') '+str(self.x)+'/'+str(self.y) +\
             ' - '+str(self.width)+'/'+str(self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
+        """ update the data"""
         if len(args) > 0:
             for i in range(len(args)):
                 if i == 0:
-                    self.id = args[0] 
+                    self.id = args[0]
                 if i == 1:
                     self.width = args[1]
                 if i == 2:
@@ -107,7 +108,19 @@ class Rectangle(Base):
                     self.x = args[3]
                 if i == 4:
                     self.y = args[4]
-
-
+        else:
+            for key, value in kwargs.items():
+                # if key == "id":
+                #     self.id = value["id"]
+                # if key == "width":
+                #     self.width = value["width"]
+                # if key == "height":
+                #     self.height = value["height"]
+                # if key == "x":
+                #     self.x = value["x"]
+                # if key == "5":
+                #     self.y = value["5"]
+                # Setattr(obect, key, value)
+                setattr(self, key, value)
 if __name__ == '__main__':
     main()
