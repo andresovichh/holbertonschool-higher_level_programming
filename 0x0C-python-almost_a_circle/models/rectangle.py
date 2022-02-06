@@ -9,20 +9,28 @@ class Rectangle(Base):
     Class Rectangle definition"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Instantiation of a class Rectanle object"""
-
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
 
     @property
-    def width(self) -> str:
+    def width(self):
         """ gets the width"""
         return self.__width
 
+    @width.setter
+    def width(self, width):
+        """setter for the width"""
+        self.__width = width
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        elif width <= 0:
+            raise ValueError("width must be > 0")
+
     @property
-    def height(self) -> str:
+    def height(self):
         """ gets the height"""
         return self.__height
 
@@ -32,19 +40,11 @@ class Rectangle(Base):
         self.__height = height
         if type(height) is not int:
             raise TypeError("height must be an integer")
-        if height < 0:
-            raise ValueError("height must be > 0")  
+        elif height <= 0:
+            raise ValueError("height must be >= 0")
 
-    @width.setter
-    def width(self, width):
-        """setter for the width"""
-        self.__width = width
-        if type(width) is not int:
-            raise TypeError("width must be an integer")
-        if width < 0:
-            raise ValueError("width must be > 0")
     @property
-    def x(self) -> str:
+    def x(self):
         """ gets the x"""
         return self.__x
 
@@ -52,7 +52,9 @@ class Rectangle(Base):
     def x(self, x):
         """setter for the x"""
         self.__x = x
-        if x < 0:
+        if type(x) is not int:
+            raise TypeError("x must be an integer")
+        elif x < 0:
             raise ValueError("x must be >= 0")
 
     @property
@@ -65,8 +67,11 @@ class Rectangle(Base):
         """setter for the y"""
         self.__y = y
 
-        if y < 0:
-            raise ValueError("y must be >= 0")        
+        if type(y) is not int:
+            raise TypeError("y must be an integer")
+
+        elif y < 0:
+            raise ValueError("y must be >= 0")
 
 if __name__ == '__main__':
     main()
