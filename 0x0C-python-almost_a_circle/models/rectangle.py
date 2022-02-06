@@ -73,5 +73,21 @@ class Rectangle(Base):
         elif y < 0:
             raise ValueError("y must be >= 0")
 
+    def area(self):
+        """ REturns area of Rectangle"""
+        return self.width * self.height
+
+    def display(self):
+        """ prints a rectangle pattern"""
+        for x in range(self.height):
+            for i in range(self.width):
+                print("#", end="")
+            print()
+
+    def __str__(self):
+        """ override str"""
+        return '[Rectangle] ('+str(self.id)+') '+str(self.x)+'/'+str(self.y) +\
+            ' - '+str(self.width)+'/'+str(self.height)
+
 if __name__ == '__main__':
     main()
