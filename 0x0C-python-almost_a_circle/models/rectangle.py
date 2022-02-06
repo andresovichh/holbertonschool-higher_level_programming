@@ -79,9 +79,14 @@ class Rectangle(Base):
 
     def display(self):
         """ prints a rectangle pattern"""
-        for x in range(self.height):
-            for i in range(self.width):
-                print("#", end="")
+        if self.y <= 1:
+            pass
+        else:
+            print("\n"*int(self.y -1))
+        for a in range(self.height):
+            print(" " * self.x, end="")
+            for b in range(self.width):               
+                print("#", end="")           
             print()
 
     def __str__(self):
