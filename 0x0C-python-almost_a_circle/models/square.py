@@ -10,8 +10,7 @@ class Square(Rectangle):
         """ instanciation of a Square object"""
 
         super().__init__(size, size, x, y, id)
-    
-        
+
     @property
     def size(self):
         """ the size getter """
@@ -22,8 +21,6 @@ class Square(Rectangle):
         """ the size setter"""
         self.width = size
         self.height = size
-    
-    
 
 if __name__ == '__main__':
     main()
