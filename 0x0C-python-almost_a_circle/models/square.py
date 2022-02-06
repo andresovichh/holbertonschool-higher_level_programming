@@ -10,10 +10,10 @@ class Square(Rectangle):
         """ instanciation of a Square object"""
 
         super().__init__(size, size, x, y, id)
-    
+
     def __str__(self):
         """the overloading str method """
-        return '[Square] ('+str(self.id)+') '+str(self.x)+'/'+str(self.y)+\
+        return '[Square] ('+str(self.id)+') '+str(self.x)+'/'+str(self.y) +\
             ' - '+str(self.size)
 
     @property
@@ -26,7 +26,7 @@ class Square(Rectangle):
         """ the size setter"""
         self.width = size
         self.height = size
-    
+
     def update(self, *args, **kwargs):
         """ update the data"""
         if len(args) > 0:
