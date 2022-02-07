@@ -29,25 +29,25 @@ class TestBase(unittest.TestCase):
     def test_documentations(self):
         """check if method has doc"""
 
-        self.assertTrue(len(Base.to_json_string.__doc__) > 0)
+        self.assertTrue(len(Rectangle.to_dictionary.__doc__) > 0)
 
     def test_documentations1(self):
         """check if method has doc"""
 
-        self.assertTrue(len(Base.save_to_file.__doc__) > 0)
+        self.assertTrue(len(Rectangle.area.__doc__) > 0)
     
     def test_documentations2(self):
         """check if method has doc"""
 
-        self.assertTrue(len(Base.from_json_string.__doc__) > 0)
+        self.assertTrue(len(Rectangle.display.__doc__) > 0)
     
     def test_documentations3(self):
         """check if method has doc"""
 
-        self.assertTrue(len(Base.create.__doc__) > 0)
+        self.assertTrue(len(Rectangle.__str__.__doc__) > 0)
     
     def test_documentations4(self):
         """check if method has doc"""
 
-        self.assertTrue(len(Base.load_from_file.__doc__) > 0)    
+        self.assertTrue(len(Rectangle.update.__doc__) > 0)    
     
