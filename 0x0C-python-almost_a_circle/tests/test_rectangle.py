@@ -112,6 +112,11 @@ class TestBase(unittest.TestCase):
             mess = "[{}] {}".format(e.__class__.__name__, e)
 
         self.assertEqual(err, mess)
+
+    def test_area(self):
+        """ test area"""
+        r1 = Rectangle(3, 2)
+        self.assertEqual(r1.area(), 6)
 class TestCodeFormat(unittest.TestCase):
     def test_pep8_conformance(self):
         fchecker = pep8.Checker('models/base.py', show_source=True)
