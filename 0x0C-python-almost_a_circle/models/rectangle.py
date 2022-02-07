@@ -79,7 +79,7 @@ class Rectangle(Base):
 
     def display(self):
         """ prints a rectangle pattern"""
-        if self.y <= 1:
+        if self.y <= 0:
             pass
         else:
             print("\n"*int(self.y - 1))
