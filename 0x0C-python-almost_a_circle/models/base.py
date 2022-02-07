@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-import json
+
 """
 Module that creates Base class"""
-
+import json
 
 class Base:
     """ Creation of Base class"""
