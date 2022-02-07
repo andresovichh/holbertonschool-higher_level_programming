@@ -143,6 +143,21 @@ class TestBase(unittest.TestCase):
         print(r1)
         self.assertEqual(str(r1), msg)
 
+    def test_dictrep(self):
+        """ 13. dict rep"""
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(10, 2, 1, 9)
+        print(r1)
+        r1_dictionary = r1.to_dictionary()
+        print(r1_dictionary)
+        print(type(r1_dictionary))
+
+        r2 = Rectangle(1, 1)
+        print(r2)
+        r2.update(**r1_dictionary)
+        print(r2)
+        print(r1 == r2)
+        self.assertIsNot(r1, r2)
 class TestCodeFormat(unittest.TestCase):
     def test_pep8_conformance(self):
         fchecker = pep8.Checker('models/base.py', show_source=True)
