@@ -83,6 +83,14 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError):
             rec4t = Rectangle()
     
+    def test_a_string(self):
+        """ no args test"""
+        Base._Base__nb_objects = 0
+        errm = "TypeError: __init__() takes from 3 to 6 positional arguments but 7 were given"
+        with self.assertRaises(TypeError):
+            rec4t = Rectangle(10, "30")
+
+
     def test_Noheight(self):
         """ Height as string"""
         err = "[TypeError] height must be an integer"
@@ -96,10 +104,10 @@ class TestBase(unittest.TestCase):
 
     def test_negativewidth(self):
         """ negative width"""
-        err = "[ValueError] width must be > 0"
+        err = "[ValueError] y must be >= 0"
         try:
-            r = Rectangle(10, 2)
-            r.width = -10
+            r = Rectangle(10, 2, 3, -1)
+
         except Exception as e:
             mess = "[{}] {}".format(e.__class__.__name__, e)
 
