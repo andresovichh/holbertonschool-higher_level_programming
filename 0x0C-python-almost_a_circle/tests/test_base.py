@@ -110,6 +110,30 @@ class TestBase(unittest.TestCase):
         j = Base("ok")
         self.assertEqual(j.id, 'ok')
 
+    def test_onlywithargs(self):
+        """ passing three args"""
+        Base._Base__nb_objects = 0
+
+        messages = "TypeError: __init__() takes from 1 to 2 positional arguments but 3 were given"
+        with self.assertRaises(TypeError) as err:
+
+            j = Base(1, 2)
+            self.assertEqual(messages, str(err.exception))
+    
+    def test_createaRectangle(self):
+        """ Check they are two different objects"""
+
+        from models.rectangle import Rectangle
+        Base._Base__nb_objects
+        r1 = Rectangle(3, 5, 1)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dictionary)
+        self.assertFalse(r1 is r2)
+        self.assertNotEqual(r1, r2)
+         
+
+    
+    
     # def test_to_json_str(self):
     #     """ to json string testing usual case"""
     #     from models.rectangle import Rectangle
