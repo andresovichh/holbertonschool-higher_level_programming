@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-from csv import list_dialects
-from curses.textpad import rectangle
+
 import json
 """
 Module that creates Base class"""
