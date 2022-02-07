@@ -131,7 +131,19 @@ class TestBase(unittest.TestCase):
         self.assertFalse(r1 is r2)
         self.assertNotEqual(r1, r2)
          
+    def test_createaRectangle(self):
+        """ Passing an empty dictionary"""
 
+        from models.rectangle import Rectangle
+        Base._Base__nb_objects
+
+
+        errmssg = "AttributeError: 'dict' object has no attribute 'to_dictionary'"
+        with self.assertRaises(AttributeError) as err:
+            r1 = {}
+            r1_dictionary = [r1.to_dictionary()]
+            r2 = Rectangle.create(**r1_dictionary)
+            self.assertEqual(errmssg, str(err.exception))
     
     
     # def test_to_json_str(self):
