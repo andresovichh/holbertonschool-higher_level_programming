@@ -82,5 +82,18 @@ class TestBase(unittest.TestCase):
         errm = "TypeError: __init__() takes from 3 to 6 positional arguments but 7 were given"
         with self.assertRaises(TypeError):
             rec4t = Rectangle()
+    
+    def test_Noheight(self):
+        """ Height as string"""
+        err = "[TypeError] height must be an integer"
+
+        try:
+            Rectangle(10, "2")
+        except Exception as e:
+            mess = "[{}] {}".format(e.__class__.__name__, e)
+
+        self.assertEqual(mess, err)
+
+
    
 
