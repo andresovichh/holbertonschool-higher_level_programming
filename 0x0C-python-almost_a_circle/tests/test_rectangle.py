@@ -94,6 +94,19 @@ class TestBase(unittest.TestCase):
 
         self.assertEqual(mess, err)
 
+    def test_negativewidth(self):
+        """ negative width"""
+        err = "[ValueError] width must be > 0"
+        try:
+            r = Rectangle(10, 2)
+            r.width = -10
+        except Exception as e:
+            mess = "[{}] {}".format(e.__class__.__name__, e)
 
-   
+        self.assertEqual(err, mess)
+class TestCodeFormat(unittest.TestCase):
+    def test_pep8_conformance(self):
+        fchecker = pep8.Checker('models/base.py', show_source=True)
+        file_errors = fchecker.check_all()
 
+        print("Found %s errors (and warnings)" % file_errors)
