@@ -117,6 +117,10 @@ class TestBase(unittest.TestCase):
         """ test area"""
         r1 = Rectangle(3, 2)
         self.assertEqual(r1.area(), 6)
+
+    def test_display(self):
+        """ display self"""
+        
 class TestCodeFormat(unittest.TestCase):
     def test_pep8_conformance(self):
         fchecker = pep8.Checker('models/base.py', show_source=True)
