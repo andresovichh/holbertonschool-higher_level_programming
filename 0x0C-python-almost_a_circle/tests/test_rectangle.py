@@ -126,6 +126,13 @@ class TestBase(unittest.TestCase):
         msg = "[Rectangle] (12) 2/1 - 4/6"
         self.assertEqual(str(r1), str(msg))
 
+    def test_str__2(self):
+        """ test __str__ method, no args to Rectangle"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r1 = Rectangle()
+            msg = "TypeError: __init__() missing 2 required positional arguments: 'width' and 'height'"
+            self.assertEqual(r1, msg)
 class TestCodeFormat(unittest.TestCase):
     def test_pep8_conformance(self):
         fchecker = pep8.Checker('models/base.py', show_source=True)
