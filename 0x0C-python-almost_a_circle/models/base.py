@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-
-
 """
 Module that creates Base class"""
 import json
+
 
 class Base:
     """ Creation of Base class"""
