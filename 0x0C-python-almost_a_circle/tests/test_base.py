@@ -5,6 +5,7 @@ import json
 import unittest
 from models.base import Base
 import pep8
+import os
 
 
 """
@@ -18,12 +19,42 @@ class TestBase(unittest.TestCase):
         """documentation"""
 
         self.assertTrue(len(Base.__doc__) > 0)
+    
+    def test_documentations(self):
+        """check if method has doc"""
+
+        self.assertTrue(len(Base.to_json_string.__doc__) > 0)
+
+    def test_documentations1(self):
+        """check if method has doc"""
+
+        self.assertTrue(len(Base.save_to_file.__doc__) > 0)
+    
+    def test_documentations2(self):
+        """check if method has doc"""
+
+        self.assertTrue(len(Base.from_json_string.__doc__) > 0)
+    
+    def test_documentations3(self):
+        """check if method has doc"""
+
+        self.assertTrue(len(Base.create.__doc__) > 0)
+    
+    def test_documentations4(self):
+        """check if method has doc"""
+
+        self.assertTrue(len(Base.load_from_file.__doc__) > 0)    
+    
+    
+    
+    #1
+    
     def test_usual_case(self):
         """ Basic test case with:
         negative id,
         large number, 
         assignment of id"""
-        Base.__nb_objects = 0
+        Base._Base__nb_objects = 0
         b1 = Base(10)
         self.assertEqual(b1.id, 10)
         b2 = Base()
@@ -43,30 +74,41 @@ class TestBase(unittest.TestCase):
         b9 = Base()
         self.assertEqual(b9.id, 4)
 
+
+    #2
+    def test_noidprovided(self):
+        # need to equal to 0 so overrides previous id
+        Base._Base__nb_objects = 0
+        b1 = Base()
+        self.assertEqual(b1.id, 1)
+
+    #3
+
+    def test_nodatapassed(self):
+        Base._Base__nb_objects = 0
+        a1 = Base()
+        a2 = Base()
+        self.assertEqual(a2.id, 2)   
+
+
+
+    def test_onlywithargs(self):
+        """ test only with args"""
+        Base._Base__nb_objects = 0
+
+        j = Base(122)
+        k = Base(-54)
+        l = Base(25)
+        self.assertEqual(j.id, 122)
+        self.assertEqual(k.id, -54)
+        self.assertEqual(l.id, 25)
     
-    def test_documentations(self):
-        """check if method has doc"""
+    def test_onlywithargs(self):
+        """ passing a str"""
+        Base._Base__nb_objects = 0
 
-        self.assertTrue(len(Base.to_json_string.__doc__) > 0)
-
-    def test_documentations1(self):
-        """check if method has doc"""
-
-        self.assertTrue(len(Base.save_to_file.__doc__) > 0)
-    def test_documentations2(self):
-        """check if method has doc"""
-
-        self.assertTrue(len(Base.from_json_string.__doc__) > 0)
-    def test_documentations3(self):
-        """check if method has doc"""
-
-        self.assertTrue(len(Base.create.__doc__) > 0)
-    def test_documentations4(self):
-        """check if method has doc"""
-
-        self.assertTrue(len(Base.load_from_file.__doc__) > 0)
-
-    # 20
+        j = Base("ok")
+        self.assertEqual(j.id, 'ok')
 
     # def test_to_json_str(self):
     #     """ to json string testing usual case"""
@@ -75,8 +117,8 @@ class TestBase(unittest.TestCase):
     #     dictionary = r1.to_dictionary()
     #     json_dictionary = Base.to_json_string([dictionary])
     #     str_totest = [{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]
-    #     to_jsn = Base.to_json_string(dict(str_totest))
-    #     self.assertIs(to_jsn, json_dictionary)
+    #     to_jsn = (dict(str_totest))
+    #     self.assertDictEqual(to_jsn, json_dictionary)
 
 
         # with self.assertRaises(TypeError) as i:
