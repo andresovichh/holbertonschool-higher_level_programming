@@ -118,9 +118,14 @@ class TestBase(unittest.TestCase):
         r1 = Rectangle(3, 2)
         self.assertEqual(r1.area(), 6)
 
-    def test_display(self):
-        """ display self"""
-        
+    def test_str__(self):
+        """ test __str__ method"""
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        msg = "[Rectangle] (12) 2/1 - 4/6"
+        self.assertEqual(str(r1), str(msg))
+
 class TestCodeFormat(unittest.TestCase):
     def test_pep8_conformance(self):
         fchecker = pep8.Checker('models/base.py', show_source=True)
