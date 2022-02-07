@@ -45,7 +45,10 @@ class TestBase(unittest.TestCase):
 
         self.assertTrue(len(Base.load_from_file.__doc__) > 0)    
     
-    
+    def test_documentation5(self):
+        """documentation"""
+
+        self.assertTrue(len(Base.__init__.__doc__) > 0)
     
     #1
     
@@ -103,14 +106,14 @@ class TestBase(unittest.TestCase):
         self.assertEqual(k.id, -54)
         self.assertEqual(l.id, 25)
     
-    def test_onlywithargs(self):
+    def test_onlywithargs1(self):
         """ passing a str"""
         Base._Base__nb_objects = 0
 
         j = Base("ok")
         self.assertEqual(j.id, 'ok')
 
-    def test_onlywithargs(self):
+    def test_onlywithargs2(self):
         """ passing three args"""
         Base._Base__nb_objects = 0
 
