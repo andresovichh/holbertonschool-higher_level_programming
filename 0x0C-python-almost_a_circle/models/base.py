@@ -74,5 +74,3 @@ class Base:
         with open('{}.json'.format(cls.__name__), 'r+', 'utf-8') as f:
             return 2
 
-if __name__ == "__main___":
-    main()
