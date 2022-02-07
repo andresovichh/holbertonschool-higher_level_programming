@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-
+  
 """Unittest for the Base class"""
 import json
 import unittest
 from models.base import Base
-
 import pep8
+import os
+
 
 """
 Tests for the Base CLASS
@@ -18,7 +19,7 @@ class TestBase(unittest.TestCase):
         """documentation"""
 
         self.assertTrue(len(Base.__doc__) > 0)
-
+    
     def test_documentations(self):
         """check if method has doc"""
 
@@ -28,33 +29,33 @@ class TestBase(unittest.TestCase):
         """check if method has doc"""
 
         self.assertTrue(len(Base.save_to_file.__doc__) > 0)
-
+    
     def test_documentations2(self):
         """check if method has doc"""
 
         self.assertTrue(len(Base.from_json_string.__doc__) > 0)
-
+    
     def test_documentations3(self):
         """check if method has doc"""
 
         self.assertTrue(len(Base.create.__doc__) > 0)
-
+    
     def test_documentations4(self):
         """check if method has doc"""
 
-        self.assertTrue(len(Base.load_from_file.__doc__) > 0)
-
+        self.assertTrue(len(Base.load_from_file.__doc__) > 0)    
+    
     def test_documentation5(self):
         """documentation"""
 
         self.assertTrue(len(Base.__init__.__doc__) > 0)
-
-    # 1
-
+    
+    #1
+    
     def test_usual_case(self):
         """ Basic test case with:
         negative id,
-        large number,
+        large number, 
         assignment of id"""
         Base._Base__nb_objects = 0
         b1 = Base(10)
@@ -76,20 +77,23 @@ class TestBase(unittest.TestCase):
         b9 = Base()
         self.assertEqual(b9.id, 4)
 
-    # 2
+
+    #2
     def test_noidprovided(self):
         # need to equal to 0 so overrides previous id
         Base._Base__nb_objects = 0
         b1 = Base()
         self.assertEqual(b1.id, 1)
 
-    # 3
+    #3
 
     def test_nodatapassed(self):
         Base._Base__nb_objects = 0
         a1 = Base()
         a2 = Base()
-        self.assertEqual(a2.id, 2)
+        self.assertEqual(a2.id, 2)   
+
+
 
     def test_onlywithargs(self):
         """ test only with args"""
@@ -101,7 +105,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(j.id, 122)
         self.assertEqual(k.id, -54)
         self.assertEqual(l.id, 25)
-
+    
     def test_onlywithargs1(self):
         """ passing a str"""
         Base._Base__nb_objects = 0
@@ -113,13 +117,12 @@ class TestBase(unittest.TestCase):
         """ passing three args"""
         Base._Base__nb_objects = 0
 
-        messages = "TypeError: __init__() takes from \
-            1 to 2 positional arguments but 3 were given"
+        messages = "TypeError: __init__() takes from 1 to 2 positional arguments but 3 were given"
         with self.assertRaises(TypeError) as err:
 
             j = Base(1, 2)
             self.assertEqual(messages, str(err.exception))
-
+    
     def test_createaRectangle(self):
         """ Check they are two different objects"""
 
@@ -130,19 +133,22 @@ class TestBase(unittest.TestCase):
         r2 = Rectangle.create(**r1_dictionary)
         self.assertFalse(r1 is r2)
         self.assertNotEqual(r1, r2)
-
+         
     # def test_createaRectangle(self):
     #     """ Passing an empty dictionary"""
 
     #     from models.rectangle import Rectangle
     #     Base._Base__nb_objects
-    #     errmssg = "AttributeError:
-    #    'dict' object has no attribute 'to_dictionary'"
+
+
+    #     errmssg = "AttributeError: 'dict' object has no attribute 'to_dictionary'"
     #     with self.assertRaises(AttributeError) as err:
     #         r1 = {}
     #         r1_dictionary = [r1.to_dictionary()]
     #         r2 = Rectangle.create(**r1_dictionary)
     #         self.assertEqual(errmssg, str(err.exception))
+    
+    
     # def test_to_json_str(self):
     #     """ to json string testing usual case"""
     #     from models.rectangle import Rectangle
@@ -152,10 +158,15 @@ class TestBase(unittest.TestCase):
     #     str_totest = [{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]
     #     to_jsn = (dict(str_totest))
     #     self.assertDictEqual(to_jsn, json_dictionary)
+
+
         # with self.assertRaises(TypeError) as i:
         #     Base.to_json_string()
         # self.assertEqual("to_json_string() missing 1 required positional " +
         #     "argument: 'list_dictionaries'", str(i.exception))
+
+
+
     # def test_string(self):
     #     #!/usr/bin/python3
     #     b1 = Base()
@@ -169,7 +180,7 @@ class TestBase(unittest.TestCase):
 
 
 """ 0-main """
-
+from models.base import Base
 
 # if __name__ == "__main__":
 
