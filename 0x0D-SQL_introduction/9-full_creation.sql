@@ -7,5 +7,8 @@ CREATE TABLE IF NOT EXISTS `second_table` (
 );
 -- add rows
 INSERT INTO 'second_table' (id, name)
-VALUES ((1, 2, 3, 4), ('John', 'Alex', 'Bob', 'George'),
-(10, 3, 14, 8))
+VALUES
+(1, 'John', 10)
+(2, 'Alex', 3)
+(3, 'Bob', 14)
+(4, 'George', 8)
