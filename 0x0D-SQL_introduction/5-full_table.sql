@@ -1,3 +1,3 @@
 -- show all tables of a database
 -- database name passed as argument
-SHOW CREATE TABLE;
+SHOW CREATE TABLE `first_table`;
