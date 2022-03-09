@@ -1,9 +1,6 @@
---
---
-SELECT state_id
-FROM states
-WHERE name == 'California';
+-- cities of californi
+-- ascending order
 SELECT id, name
 FROM cities
-WHERE hbtn_0d_usa(name) == 'California'
-ORDER BY id ASC;
+WHERE state_id = (SELECT id, FROM states, WHERE name = "California")
+ORDER BY cities.id ASC;
