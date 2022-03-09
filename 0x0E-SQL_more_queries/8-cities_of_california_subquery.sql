@@ -1,9 +1,9 @@
 --
 --
 SELECT state_id
-FROM hbtn_0d_usa.states
+FROM states
 WHERE name == 'California';
 SELECT id, name
-FROM hbtn_0d_usa.cities
+FROM cities
 WHERE hbtn_0d_usa(name) == 'California'
 ORDER BY id ASC;
