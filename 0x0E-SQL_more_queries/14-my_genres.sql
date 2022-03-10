@@ -4,5 +4,9 @@
 -- Results must be sorted in ascending order by the genre name
 -- You can use only one SELECT statement
 
-SELECT tv_shows.Dexter
-FROM tv_shows
+SELECT tv_genres.name
+FROM tv_show_genres
+JOIN tv_shows ON tv_shows.id = tv_show_genres.show_id
+JOIN tv_genres ON tv_genres.id = tv_show_genres.genre_id
+WHERE tv_shows.title = "Dexter"
+ORDER BY tv_genres.name;
