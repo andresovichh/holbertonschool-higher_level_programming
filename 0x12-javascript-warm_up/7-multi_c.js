@@ -1,7 +1,7 @@
-#!/usr/bin/node
+#!/usr/local/bin/node
 if (process.argv[2] !== undefined) {
   if (parseInt(process.argv[2])) {
-    for (let i = 0; i <= parseInt(process.argv[2]); i++) {
+    for (let i = 0; i <= parseInt(process.argv[2]) - 1; i++) {
       console.log('C is fun');
     }
   } else {
