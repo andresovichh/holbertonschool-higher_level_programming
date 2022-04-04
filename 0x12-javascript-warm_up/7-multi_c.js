@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 if (process.argv[2] !== undefined) {
   if (parseInt(process.argv[2])) {
     for (let i = 0; i <= parseInt(process.argv[2]) - 1; i++) {
