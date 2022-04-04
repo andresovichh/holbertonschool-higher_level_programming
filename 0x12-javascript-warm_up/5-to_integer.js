@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 if (process.argv[2] !== undefined) {
   if (parseInt(process.argv[2])) {
     console.log('My number: ' + parseInt(process.argv[2]));
