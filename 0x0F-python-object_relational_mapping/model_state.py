@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""
+State class definition"""
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
