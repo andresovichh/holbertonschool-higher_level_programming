@@ -4,8 +4,9 @@
 Module thet lists all State objects from the
 database hbtn_0e_6_usa
 """
-from sys import argv
 
+from sys import argv
+import sqlalchemy
 from requests import Session
 from model_state import Base, State
 from sqlalchemy import (create_engine, null)
@@ -17,9 +18,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
+    first = session.query(State).order_by(State.id).first()
 
-    for item in session.query(State):
-        if item.id == 1:
-            print("{}: {}".format(item.id, item.name))
-        if item.id == null:
-            print("Nothing \n")
+    if first is not None:
+        print("{}: {}".format(first.id, first.name))
+    else:
+        print("Nothing")
