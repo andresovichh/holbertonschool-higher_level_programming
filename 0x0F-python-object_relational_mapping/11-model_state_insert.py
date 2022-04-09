@@ -19,7 +19,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    sta = State(name = 'Louisiana')
+    sta = State(name='Louisiana')
     session.add(sta)
-    for item in session.query(State).filter(State.name.like('Louisiana')):
-        print("{}".format(item.id))
+    new = session.query(State).filter(State.name.like('Louisiana')).first()
+    session.commit()
+    print("{}".format(new.id))
