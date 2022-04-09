@@ -14,7 +14,7 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name='{}' \
-                   ORDER BY id ASC".format(sys.argv[4]))
+                   ORDER BY states.id ASC".format(sys.argv[4]))
     result = cursor.fetchall()
     for row in result:
         print(row)
