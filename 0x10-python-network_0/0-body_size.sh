@@ -1,3 +1,3 @@
 #!/bin/bash
 # -s silent -I head
-curl -so "$1" -w '%{size_download}\n'
+curl -so /dev/null "$1" -w '%{size_download}\n'
