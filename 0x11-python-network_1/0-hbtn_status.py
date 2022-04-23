@@ -3,9 +3,12 @@
 This is a module that fetches a URL"""
 
 import urllib.request
-from pprint import pprint
 
 
 
 with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
-    print(response.headers.items())
+    response = response.read()
+    print("Body response:")
+    print("\t- {}".format(type(response)))
+    print("\t- {}".format(response))
+    print("\t- {}".format(response.decode('utf-8')))
