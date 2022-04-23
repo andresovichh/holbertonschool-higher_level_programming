@@ -19,6 +19,5 @@ if __name__ == '__main__':
     import requests
     from sys import argv
 
-    payload = {'email': argv[2]}
-    r = requests.get(argv[1], data=payload)
+    r = requests.get(argv[1], data = {'email':argv[2]})
     print(r.text)
