@@ -34,6 +34,6 @@ if __name__ == '__main__':
         if len(js) == 0:
             print("No result")
         else:
-            print("[{}] <{}>".format(js.get('id'), js.get('name')))
+            print("[{}] {}".format(js.get('id'), js.get('name')))
     except ValueError:
         print("Not a valid JSON")
