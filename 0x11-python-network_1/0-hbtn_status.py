@@ -3,10 +3,9 @@
 This is a module that fetches a URL"""
 
 import urllib.request
+from pprint import pprint
 
 
 
-req = urllib.request.Request('https://intranet.hbtn.io/status')
-with urllib.request.urlopen(req) as response:
-    the_page = response.read()
-    print("\t{}".format(type(the_page)))
+with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+    print(response.headers.items())
