@@ -2,7 +2,7 @@
 
 const argv = process.argv;
 const axios = require('axios').default;
-const apii = (argv[2]);
+const apii = (argv[1]);
 axios.get(apii)
   .then(function (response) {
     let counter = 0;
