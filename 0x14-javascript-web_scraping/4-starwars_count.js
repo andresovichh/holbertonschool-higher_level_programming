@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 const argv = process.argv;
 const axios = require('axios').default;
 const apii = (argv[2]);
