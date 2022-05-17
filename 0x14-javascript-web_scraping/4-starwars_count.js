@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/local/bin/node
 const argv = process.argv;
 const axios = require('axios').default;
 const apii = (argv[2]);
@@ -13,6 +13,6 @@ axios.get(apii)
     }
     console.log(counter);
   })
-  .catch((error) {
-    console.log(error);
+  .catch(function (error) {
+    console.log(error.response.status);
   });
