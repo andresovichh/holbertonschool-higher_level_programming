@@ -14,5 +14,6 @@ axios.get(apii)
     console.log(counter);
   })
   .catch(function (error) {
-    console.log(error.response.status);
+    error = 0;
+    console.log(error);
   });
