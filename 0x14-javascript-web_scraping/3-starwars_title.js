@@ -1,6 +1,7 @@
 #!/usr/bin/node
+const argv = process.argv;
 const axios = require('axios').default;
-axios.get('https://swapi-api.hbtn.io/api/films/' + process.argv[2] + '/')
+axios.get('https://swapi-api.hbtn.io/api/films/' + argv[2] + '/')
   .then(function (response) {
     console.log('code: ' + response.data.title);
   })
