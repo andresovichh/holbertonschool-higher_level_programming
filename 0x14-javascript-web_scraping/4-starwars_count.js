@@ -12,7 +12,7 @@ axios.get(apii)
             counter++;
         }
     console.log(counter);
-  })
+  }})
   .catch(function (error) {
     console.log(error.response.status);
   });
