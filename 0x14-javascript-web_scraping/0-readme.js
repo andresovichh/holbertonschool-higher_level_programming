@@ -1,4 +1,4 @@
-#!/usr/local/opt/node@10/bin/node
+#!/usr/bin/node
 
 /*
   Exercise 14: Web Scraping
